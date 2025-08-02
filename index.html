@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create ID Card</h2>
+    <form id="card-form">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="role" placeholder="Role/Title" required />
+      <input type="tel" id="phone" placeholder="123 456 - 7890" maxlength="16" required />
+      <input type="file" id="photo" accept="image/*" required />
+      <button type="submit">Generate Card</button>
+    </form>
+  </div>
+
+  <div id="card-preview" class="id-card hidden">
+    <img id="card-photo" class="avatar" alt="Photo" />
+    <h2 id="card-name">Name</h2>
+    <p id="card-role">Role</p>
+    <p id="card-phone">Phone</p>
+    <canvas id="card-canvas" class="hidden"></canvas>
+    <button id="download-btn" class="hidden">Download ID Card</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
